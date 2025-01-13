@@ -1,13 +1,14 @@
+import 'package:dalel/core/routes/app_router.dart';
+import 'package:dalel/core/routes/app_routes.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
-    builder: (context) {
-      return const DalelApp();
-    }
-  ));
+      enabled: true,
+      builder: (context) {
+        return const DalelApp();
+      }));
 }
 
 class DalelApp extends StatelessWidget {
@@ -18,7 +19,8 @@ class DalelApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Dalel',
-      home: Scaffold(),
+      initialRoute: AppRoutes.splashScreenRoute,
+      onGenerateRoute: AppRouter.ongenerateRoute,
     );
   }
 }
