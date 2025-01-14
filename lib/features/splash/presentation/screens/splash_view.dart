@@ -1,15 +1,41 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class SplashView extends StatelessWidget {
+import 'package:dalel/core/ResponsiveHelper/size_config.dart';
+import 'package:dalel/core/routes/app_routes.dart';
+import 'package:dalel/core/utils/app_text_style.dart';
+import 'package:flutter/material.dart';
+import 'package:dalel/generated/l10n.dart';
+
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
   @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    delayNavigate();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Hello Disha"),
-        centerTitle: true,
+      body: Center(
+        child: Text(S.of(context).appName, style: AppTextStyle.logoStyle),
       ),
+    );
+  }
+
+  void delayNavigate() {
+    Timer(
+      const Duration(seconds: 4),
+      () => Navigator.of(context)
+          .pushReplacementNamed(AppRoutes.onBoardingScreenRoute),
     );
   }
 }
