@@ -20,7 +20,7 @@ class CustomPageViewBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-              height: SizeConfig.blockHeight! * 37,
+              height: SizeConfig.blockHeight! * 42,
               child: Image.asset(listData.url)),
           const VerticalSpace(height: 2),
           const CustomDotteIndicator(),
