@@ -1,4 +1,3 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
 import 'package:dalel/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +16,9 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(SizeConfig.blockWidth!*2.5)
+        borderRadius: BorderRadius.circular(10)
       ),
-      minWidth: SizeConfig.screenWidth,
+      minWidth: double.infinity,
       height: 50,
       color: color,
       onPressed: onPressed,

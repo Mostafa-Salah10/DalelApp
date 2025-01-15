@@ -26,11 +26,15 @@ class CustomPageViewBody extends StatelessWidget {
           const CustomDotteIndicator(),
           const VerticalSpace(height: 2),
           Text(
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               listData.title,
               style: AppTextStyle.poppinsstyle24),
           const VerticalSpace(height: 3),
           Text(
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
             listData.descraption,
             style: AppTextStyle.poppinsstyle16,
             textAlign: TextAlign.center,

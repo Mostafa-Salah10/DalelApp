@@ -21,10 +21,12 @@ class DalelApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+
         scaffoldBackgroundColor: AppColors.offWhite,
       ),
       debugShowCheckedModeBanner: false,
       title: 'Dalel',
+      
       initialRoute: AppRoutes.splashScreenRoute,
       onGenerateRoute: AppRouter.ongenerateRoute,
       localizationsDelegates: const [
