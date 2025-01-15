@@ -59,6 +59,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Skip`
+  String get skipText {
+    return Intl.message(
+      'Skip',
+      name: 'skipText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an Account`
+  String get createAcounte {
+    return Intl.message(
+      'Create an Account',
+      name: 'createAcounte',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loging Now`
+  String get loginNow {
+    return Intl.message(
+      'Loging Now',
+      name: 'loginNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore The history with Dalel in a smart way`
+  String get tileOnboarding1 {
+    return Intl.message(
+      'Explore The history with Dalel in a smart way',
+      name: 'tileOnboarding1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `From every place\n on earth`
+  String get tileOnboarding2 {
+    return Intl.message(
+      'From every place\n on earth',
+      name: 'tileOnboarding2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using modern AI technology for better user experience`
+  String get tileOnboarding3 {
+    return Intl.message(
+      'Using modern AI technology for better user experience',
+      name: 'tileOnboarding3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using our app’s history libraries you can find many historical periods `
+  String get descraptionOnboarding1 {
+    return Intl.message(
+      'Using our app’s history libraries you can find many historical periods ',
+      name: 'descraptionOnboarding1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A big variety of ancient places from all over the world`
+  String get descraptionOnboarding2 {
+    return Intl.message(
+      'A big variety of ancient places from all over the world',
+      name: 'descraptionOnboarding2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `AI provide recommendations and helps you to continue the search journey`
+  String get descraptionOnboarding3 {
+    return Intl.message(
+      'AI provide recommendations and helps you to continue the search journey',
+      name: 'descraptionOnboarding3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

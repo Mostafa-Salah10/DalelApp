@@ -1,3 +1,13 @@
 {
-  "appName":"Dalel"
+  "appName":"Dalel",
+  "skipText":"Skip",
+  "next":"Next",
+  "createAcounte":"Create an Account",
+  "loginNow":"Loging Now",
+  "tileOnboarding1":"Explore The history with Dalel in a smart way",
+  "tileOnboarding2":"From every place\n on earth",
+  "tileOnboarding3":"Using modern AI technology for better user experience",  
+  "descraptionOnboarding1":"Using our app’s history libraries you can find many historical periods ",
+  "descraptionOnboarding2":"A big variety of ancient places from all over the world",
+  "descraptionOnboarding3":"AI provide recommendations and helps you to continue the search journey"
 }

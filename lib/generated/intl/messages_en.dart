@@ -22,6 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "appName": MessageLookupByLibrary.simpleMessage("Dalel")
+        "appName": MessageLookupByLibrary.simpleMessage("Dalel"),
+        "createAcounte":
+            MessageLookupByLibrary.simpleMessage("Create an Account"),
+        "descraptionOnboarding1": MessageLookupByLibrary.simpleMessage(
+            "Using our app’s history libraries you can find many historical periods "),
+        "descraptionOnboarding2": MessageLookupByLibrary.simpleMessage(
+            "A big variety of ancient places from all over the world"),
+        "descraptionOnboarding3": MessageLookupByLibrary.simpleMessage(
+            "AI provide recommendations and helps you to continue the search journey"),
+        "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "skipText": MessageLookupByLibrary.simpleMessage("Skip"),
+        "tileOnboarding1": MessageLookupByLibrary.simpleMessage(
+            "Explore The history with Dalel in a smart way"),
+        "tileOnboarding2":
+            MessageLookupByLibrary.simpleMessage("From every place\n on earth"),
+        "tileOnboarding3": MessageLookupByLibrary.simpleMessage(
+            "Using modern AI technology for better user experience")
       };
 }
