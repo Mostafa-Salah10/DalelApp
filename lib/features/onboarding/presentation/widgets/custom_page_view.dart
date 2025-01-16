@@ -1,9 +1,5 @@
-import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
-import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/widgets/custom_page_view_body.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 class CustomPageView extends StatelessWidget {
   const CustomPageView({super.key});
 

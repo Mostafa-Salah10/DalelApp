@@ -1,9 +1,4 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
-import 'package:dalel/core/utils/app_text_style.dart';
-import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
-import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:dalel/generated/l10n.dart';
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomSkipText extends StatelessWidget {
   const CustomSkipText({

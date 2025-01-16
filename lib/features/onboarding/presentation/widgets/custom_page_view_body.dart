@@ -1,10 +1,4 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
-import 'package:dalel/core/utils/app_spaces.dart';
-import 'package:dalel/core/utils/app_text_style.dart';
-import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
-import 'package:dalel/features/onboarding/presentation/widgets/custom_dotte_indicator.dart';
-import 'package:flutter/material.dart';
-
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 class CustomPageViewBody extends StatelessWidget {
   const CustomPageViewBody({
     super.key,

@@ -1,4 +1,6 @@
 import 'package:dalel/core/routes/app_routes.dart';
+import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
+import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
 import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
 import 'package:dalel/features/splash/presentation/screens/splash_view.dart';
@@ -12,10 +14,14 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (_) => const SplashView());
       case AppRoutes.onBoardingScreenRoute:
         return MaterialPageRoute(
-            builder: (context) =>
-                ChangeNotifierProvider<IndicatorProvider>(
-                  create: (context)=>IndicatorProvider(),
-                  child: const OnboardingView()));
+            builder: (context) => ChangeNotifierProvider<IndicatorProvider>(
+                create: (context) => IndicatorProvider(),
+                child: const OnboardingView()));
+
+      case AppRoutes.signInScreenRoute:
+        return MaterialPageRoute(builder: (_) => const AuthSigninVeiw());
+      case AppRoutes.signUpScreenRoute:
+        return MaterialPageRoute(builder: (_) => const AuthSignupVeiw());
       default:
         return MaterialPageRoute(builder: (_) => const SplashView());
     }

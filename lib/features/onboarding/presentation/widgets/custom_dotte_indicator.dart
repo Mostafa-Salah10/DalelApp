@@ -1,9 +1,4 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
-import 'package:dalel/core/utils/app_colors.dart';
-import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 class CustomDotteIndicator extends StatelessWidget {
   const CustomDotteIndicator({super.key});
 

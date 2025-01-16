@@ -1,16 +1,4 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
-import 'package:dalel/core/utils/app_colors.dart';
-import 'package:dalel/core/utils/app_spaces.dart';
-import 'package:dalel/core/utils/app_text_style.dart';
-import 'package:dalel/core/utils/localization_helper.dart';
-import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
-import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
-import 'package:dalel/core/widgets/custom_button.dart';
-import 'package:dalel/features/onboarding/presentation/widgets/custom_page_view.dart';
-import 'package:dalel/features/onboarding/presentation/widgets/custom_skip_text.dart';
-import 'package:flutter/material.dart';
-import 'package:dalel/generated/l10n.dart';
-import 'package:provider/provider.dart';
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -23,7 +11,7 @@ class OnboardingView extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Padding(
-        padding:  EdgeInsets.symmetric(vertical: SizeConfig.blockHeight! * 2),
+        padding: EdgeInsets.symmetric(vertical: SizeConfig.blockHeight! * 2),
         child: Column(
           children: [
             CustomSkipText(provider: provider, providerwatch: providerwatch),
@@ -33,8 +21,15 @@ class OnboardingView extends StatelessWidget {
               padding:
                   EdgeInsets.symmetric(horizontal: SizeConfig.blockHeight! * 4),
               child: CustomButton(
-                onPressed: () {
+                onPressed: () async {
                   provider.nextPage();
+                  if (provider.currentIndex == onboardingData.length - 1) {
+                    await CashHelper.set(key: "isVisited", value: true)
+                        .then((value) {
+                      customPushReplacementNavigate(
+                          context, AppRoutes.signUpScreenRoute);
+                    });
+                  }
                 },
                 text: provider.currentIndex == onboardingData.length - 1
                     ? S.of(context).createAcounte
@@ -42,19 +37,7 @@ class OnboardingView extends StatelessWidget {
               ),
             ),
             const VerticalSpace(height: 2),
-            InkWell(
-              onTap: () {},
-              child: Visibility(
-                visible: providerwatch.currentIndex == onboardingData.length - 1
-                    ? true
-                    : false,
-                child: Text(S.of(context).loginNow,
-                    style: AppTextStyle.poppinsstyle16.copyWith(
-                      decoration: TextDecoration.underline,
-                      color: AppColors.deepGrey,
-                    )),
-              ),
-            ),
+            CustomLogInText(providerwatch: providerwatch),
           ],
         ),
       ),

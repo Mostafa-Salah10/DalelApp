@@ -1,4 +1,4 @@
-import 'package:dalel/core/ResponsiveHelper/size_config.dart';
+import 'package:dalel/core/utils/size_config.dart';
 import 'package:dalel/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
