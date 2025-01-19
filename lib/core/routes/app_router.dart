@@ -1,10 +1,13 @@
 import 'package:dalel/core/routes/app_routes.dart';
+import 'package:dalel/core/service/service_locator.dart';
+import 'package:dalel/features/auth/prensentation/model_view/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
 import 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
 import 'package:dalel/features/splash/presentation/screens/splash_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 abstract class AppRouter {
@@ -19,9 +22,17 @@ abstract class AppRouter {
                 child: const OnboardingView()));
 
       case AppRoutes.signInScreenRoute:
-        return MaterialPageRoute(builder: (_) => const AuthSigninVeiw());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<AuthCubit>(),
+                  child: const AuthSigninVeiw(),
+                ));
       case AppRoutes.signUpScreenRoute:
-        return MaterialPageRoute(builder: (_) => const AuthSignupVeiw());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<AuthCubit>(),
+                  child: const AuthSignupVeiw(),
+                ));
       default:
         return MaterialPageRoute(builder: (_) => const SplashView());
     }

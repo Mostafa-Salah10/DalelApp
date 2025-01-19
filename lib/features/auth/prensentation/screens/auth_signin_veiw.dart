@@ -6,7 +6,9 @@ class AuthSigninVeiw extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("Hello Sign In")),
+      body: Center(child: Text("Hello Sign In")), 
+
     );
   }
+
 }

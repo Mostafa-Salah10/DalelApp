@@ -41,7 +41,7 @@ class _SplashViewState extends State<SplashView> {
           customPushReplacementNavigate(
               context, AppRoutes.onBoardingScreenRoute);
         } else {
-          customPushReplacementNavigate(context, AppRoutes.signInScreenRoute);
+          customPushReplacementNavigate(context, AppRoutes.signUpScreenRoute);
         }
       },
     );

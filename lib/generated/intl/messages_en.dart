@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agreeTerms":
+            MessageLookupByLibrary.simpleMessage("I have agree to our"),
         "appName": MessageLookupByLibrary.simpleMessage("Dalel"),
         "createAcounte":
             MessageLookupByLibrary.simpleMessage("Create an Account"),
@@ -31,14 +33,26 @@ class MessageLookup extends MessageLookupByLibrary {
             "A big variety of ancient places from all over the world"),
         "descraptionOnboarding3": MessageLookupByLibrary.simpleMessage(
             "AI provide recommendations and helps you to continue the search journey"),
+        "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
+        "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
+        "havaAccount": MessageLookupByLibrary.simpleMessage(
+            "Already i hava an account ? "),
+        "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "pass": MessageLookupByLibrary.simpleMessage("Password"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skipText": MessageLookupByLibrary.simpleMessage("Skip"),
+        "terms": MessageLookupByLibrary.simpleMessage(" Terms and Condition"),
         "tileOnboarding1": MessageLookupByLibrary.simpleMessage(
             "Explore The history with Dalel in a smart way"),
         "tileOnboarding2":
             MessageLookupByLibrary.simpleMessage("From every place\n on earth"),
         "tileOnboarding3": MessageLookupByLibrary.simpleMessage(
-            "Using modern AI technology for better user experience")
+            "Using modern AI technology for better user experience"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome !"),
+        "welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back !")
       };
 }

@@ -159,6 +159,128 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome !`
+  String get welcome {
+    return Intl.message(
+      'Welcome !',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome Back !`
+  String get welcomeback {
+    return Intl.message(
+      'Welcome Back !',
+      name: 'welcomeback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message(
+      'Last Name',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get emailAddress {
+    return Intl.message(
+      'Email Address',
+      name: 'emailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get pass {
+    return Intl.message(
+      'Password',
+      name: 'pass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password ?`
+  String get forgetPass {
+    return Intl.message(
+      'Forget Password ?',
+      name: 'forgetPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I have agree to our`
+  String get agreeTerms {
+    return Intl.message(
+      'I have agree to our',
+      name: 'agreeTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message(
+      'Sign In',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already i hava an account ? `
+  String get havaAccount {
+    return Intl.message(
+      'Already i hava an account ? ',
+      name: 'havaAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Terms and Condition`
+  String get terms {
+    return Intl.message(
+      ' Terms and Condition',
+      name: 'terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'don\'thavaAccount' key
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
