@@ -10,5 +10,6 @@ class AuthCubit extends Cubit<AuthCubitState> {
   void changeCheckvalue(bool value) {
     checkValue = value;
     emit(AuthCubitCheckBox());
+    
   }
 }

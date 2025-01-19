@@ -5,7 +5,7 @@ export 'package:dalel/core/utils/size_config.dart';
 export 'package:dalel/core/widgets/app_spaces.dart';
 export 'package:dalel/core/utils/localization_helper.dart';
 export 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
-export 'package:dalel/features/onboarding/presentation/model_view/indicator_provider.dart';
+export 'package:dalel/features/onboarding/presentation/manager/indicator_provider.dart';
 export 'package:dalel/core/widgets/custom_button.dart';
 export 'package:dalel/features/onboarding/presentation/widgets/custom_login_text.dart';
 export 'package:dalel/features/onboarding/presentation/widgets/custom_page_view.dart';
