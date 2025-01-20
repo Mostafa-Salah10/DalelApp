@@ -11,8 +11,8 @@ class IndicatorProvider with ChangeNotifier {
 
   void nextPage() {
     if (currentIndex != onboardingData.length - 1) {
-      controller.animateToPage(currentIndex + 1,
-          duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+      controller.nextPage(
+          duration: const Duration(milliseconds: 100), curve: Curves.easeInOut);
     }
   }
 }
