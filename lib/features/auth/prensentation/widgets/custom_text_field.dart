@@ -16,7 +16,7 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  bool hidePass = false;
+  bool hidePass = true;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,7 +31,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           }
         },
         cursorColor: AppColors.primaryColor,
-        obscureText: hidePass,
+        obscureText: widget.secure?hidePass:false,
         decoration: InputDecoration(
           suffixIcon: widget.secure == true
               ? hidePass == true

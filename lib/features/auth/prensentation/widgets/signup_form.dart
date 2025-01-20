@@ -18,7 +18,7 @@ class SignInForm extends StatelessWidget {
       listener: (context, state) {
         if (state is AuthCubitSuccess) {
           toastAlert(msg: state.msg, color: AppColors.deepBrown);
-          customPushReplacementNavigate(context, AppRoutes.homeScreenRoute);
+          customPushReplacementNavigate(context, AppRoutes.signInScreenRoute);
         } else if (state is AuthCubitFailure) {
           toastAlert(msg: state.msg, color: AppColors.red);
         }

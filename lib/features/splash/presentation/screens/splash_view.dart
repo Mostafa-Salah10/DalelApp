@@ -46,7 +46,12 @@ class _SplashViewState extends State<SplashView> {
           if (userState == null) {
             customPushReplacementNavigate(context, AppRoutes.signInScreenRoute);
           } else {
-            customPushReplacementNavigate(context, AppRoutes.homeScreenRoute);
+            if (FirebaseAuth.instance.currentUser!.emailVerified) {
+              customPushReplacementNavigate(context, AppRoutes.homeScreenRoute);
+            } else {
+              customPushReplacementNavigate(
+                  context, AppRoutes.signInScreenRoute);
+            }
           }
         }
       },

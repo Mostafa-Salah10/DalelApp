@@ -44,7 +44,10 @@ class CustomSignInForm extends StatelessWidget {
               Align(
                 alignment: Alignment.topRight,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    customPushNavigate(
+                        context, AppRoutes.forgetPasswordScreenRoute);
+                  },
                   child: Text(
                     S.of(context).forgetPass,
                     style: AppTextStyle.poppinsstyle14

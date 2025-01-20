@@ -3,6 +3,7 @@ import 'package:dalel/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
+import 'package:dalel/features/auth/prensentation/screens/forget_pass_view.dart';
 import 'package:dalel/features/home/presentation/screens/home_view.dart';
 import 'package:dalel/features/onboarding/presentation/manager/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
@@ -33,6 +34,12 @@ abstract class AppRouter {
             builder: (context) => BlocProvider(
                   create: (context) => AuthCubit(authRepo: AuthRepoImpl()),
                   child: const AuthSignupVeiw(),
+                ));
+      case AppRoutes.forgetPasswordScreenRoute:
+        return MaterialPageRoute(
+            builder: (context) => BlocProvider(
+                  create: (context) => AuthCubit(authRepo: AuthRepoImpl()),
+                  child: const ForgetPassView(),
                 ));
       case AppRoutes.homeScreenRoute:
         return MaterialPageRoute(builder: (context) => const HomeView());
