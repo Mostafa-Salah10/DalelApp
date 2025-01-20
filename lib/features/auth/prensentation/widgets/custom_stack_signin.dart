@@ -16,7 +16,7 @@ class CustomStackSignIn extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             S.of(context).appName,
-            style: AppTextStyle.poppinsstyle28
+            style: AppTextStyle.sairastyle28
                 .copyWith(color: AppColors.offWhite),
           ),
         ),

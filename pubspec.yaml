@@ -39,6 +39,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: lib/assets/fonts/Poppins-Regular.ttf
+    - family: Saira
+      fonts:
+        - asset: lib/assets/fonts/Saira-Regular.ttf
 flutter_assets:
   assets_path: lib/assets/images/
   output_path: lib/core/utils/

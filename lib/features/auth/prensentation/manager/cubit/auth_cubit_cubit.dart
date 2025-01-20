@@ -36,6 +36,8 @@ class AuthCubit extends Cubit<AuthCubitState> {
       } else if (e.code == 'email-already-in-use') {
         emit(AuthCubitFailure(
             msg: "The account already exists for that email."));
+      } else {
+        emit(AuthCubitFailure(msg: "Check Your Email Or Password"));
       }
     } catch (e) {
       emit(AuthCubitFailure(msg: e.toString()));
@@ -53,9 +55,9 @@ class AuthCubit extends Cubit<AuthCubitState> {
         emit(AuthCubitFailure(msg: "No user found for that email."));
       } else if (e.code == 'wrong-password') {
         emit(AuthCubitFailure(msg: "Wrong password provided for that user."));
+      } else {
+        emit(AuthCubitFailure(msg: "Check Your Email Or Password"));
       }
     }
   }
-
-
 }

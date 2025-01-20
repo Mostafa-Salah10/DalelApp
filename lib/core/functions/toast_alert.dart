@@ -6,7 +6,7 @@ toastAlert({required Color color, required String msg}) {
       msg: msg,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
-      timeInSecForIosWeb: 1,
+      timeInSecForIosWeb: 2,
       backgroundColor: color,
       textColor: Colors.white,
       fontSize: 16.0);

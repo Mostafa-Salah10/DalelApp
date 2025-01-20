@@ -36,4 +36,10 @@ abstract class AppTextStyle {
     fontFamily: "Poppins",
     color: AppColors.black,
   );
+  static TextStyle sairastyle28 = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: SizeConfig.textSize! * 3.8,
+    fontFamily: "Saira",
+    color: AppColors.black,
+  );
 }
