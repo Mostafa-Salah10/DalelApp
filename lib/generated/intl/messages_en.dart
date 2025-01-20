@@ -38,12 +38,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
+        "forgetPassagain":
+            MessageLookupByLibrary.simpleMessage("Forget Password"),
+        "forgetdecraption": MessageLookupByLibrary.simpleMessage(
+            "Enter your registered email below to receive password reset instruction"),
         "havaAccount": MessageLookupByLibrary.simpleMessage(
             "Already i hava an account ? "),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "pass": MessageLookupByLibrary.simpleMessage("Password"),
+        "sentRest":
+            MessageLookupByLibrary.simpleMessage("Send Verification Link"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skipText": MessageLookupByLibrary.simpleMessage("Skip"),

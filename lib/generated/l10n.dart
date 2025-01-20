@@ -230,6 +230,16 @@ class S {
     );
   }
 
+  /// `Forget Password`
+  String get forgetPassagain {
+    return Intl.message(
+      'Forget Password',
+      name: 'forgetPassagain',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `I have agree to our`
   String get agreeTerms {
     return Intl.message(
@@ -285,6 +295,26 @@ class S {
     return Intl.message(
       'Don\'t hava an account ? ',
       name: 'doNotHavaAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your registered email below to receive password reset instruction`
+  String get forgetdecraption {
+    return Intl.message(
+      'Enter your registered email below to receive password reset instruction',
+      name: 'forgetdecraption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Verification Link`
+  String get sentRest {
+    return Intl.message(
+      'Send Verification Link',
+      name: 'sentRest',
       desc: '',
       args: [],
     );

@@ -17,11 +17,16 @@
   "emailAddress":"Email Address",
   "pass":"Password",
   "forgetPass":"Forget Password ?",
+  "forgetPassagain":"Forget Password",
   "agreeTerms":"I have agree to our",
   "signUp":"Sign Up",
   "signIn":"Sign In",
   "havaAccount":"Already i hava an account ? ",
   "terms":" Terms and Condition",
-  "doNotHavaAccount":"Don't hava an account ? "
+  "doNotHavaAccount":"Don't hava an account ? ",
+  "forgetdecraption":"Enter your registered email below to receive password reset instruction",
+  "sentRest":"Send Verification Link"
+
+
 
 }

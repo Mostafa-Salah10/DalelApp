@@ -13,6 +13,7 @@ class AuthCubit extends Cubit<AuthCubitState> {
   bool checkValue = false;
   GlobalKey<FormState> signUpKey = GlobalKey();
   GlobalKey<FormState> signInKey = GlobalKey();
+  GlobalKey<FormState> forgetPassKey = GlobalKey();
   AuthCubit({required this.authRepo}) : super(AuthCubitInitial());
 
   void changeCheckvalue(bool value) {
@@ -67,5 +68,9 @@ class AuthCubit extends Cubit<AuthCubitState> {
 
   Future<void> verifyEmailAccont() async {
     await FirebaseAuth.instance.currentUser!.sendEmailVerification();
+  }
+
+  Future<void> resetPasswod() async {
+    await FirebaseAuth.instance.sendPasswordResetEmail(email: email!);
   }
 }
