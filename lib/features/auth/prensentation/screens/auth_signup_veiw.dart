@@ -20,6 +20,7 @@ class AuthSignupVeiw extends StatelessWidget {
             const SignInForm(),
             const VerticalSpace(height: 1.7),
             HaveAccountText(
+              route: AppRoutes.signInScreenRoute,
               text1: S.of(context).havaAccount,
               text2: S.of(context).signIn,
             )

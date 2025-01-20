@@ -24,6 +24,12 @@ abstract class AppTextStyle {
     fontFamily: "Poppins",
     color: AppColors.black,
   );
+  static TextStyle poppinsstyle26 = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: SizeConfig.textSize! * 3.4,
+    fontFamily: "Poppins",
+    color: AppColors.black,
+  );
   static TextStyle poppinsstyle28 = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: SizeConfig.textSize! * 3.8,

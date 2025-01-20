@@ -280,7 +280,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'don\'thavaAccount' key
+  /// `Don't hava an account ? `
+  String get doNotHavaAccount {
+    return Intl.message(
+      'Don\'t hava an account ? ',
+      name: 'doNotHavaAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

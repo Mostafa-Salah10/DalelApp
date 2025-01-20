@@ -1,7 +1,9 @@
 import 'package:dalel/core/routes/app_routes.dart';
+import 'package:dalel/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
+import 'package:dalel/features/home/presentation/screens/home_view.dart';
 import 'package:dalel/features/onboarding/presentation/manager/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
 import 'package:dalel/features/splash/presentation/screens/splash_view.dart';
@@ -13,7 +15,7 @@ abstract class AppRouter {
   static Route<dynamic> ongenerateRoute(RouteSettings? settings) {
     switch (settings?.name) {
       case AppRoutes.splashScreenRoute:
-        return MaterialPageRoute(builder: (_) => const SplashView());
+        return MaterialPageRoute(builder: (context) => const SplashView());
       case AppRoutes.onBoardingScreenRoute:
         return MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider<IndicatorProvider>(
@@ -22,18 +24,20 @@ abstract class AppRouter {
 
       case AppRoutes.signInScreenRoute:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-                  create: (context) => AuthCubit(),
+            builder: (context) => BlocProvider(
+                  create: (context) => AuthCubit(authRepo: AuthRepoImpl()),
                   child: const AuthSigninVeiw(),
                 ));
       case AppRoutes.signUpScreenRoute:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-                  create: (context) => AuthCubit(),
+            builder: (context) => BlocProvider(
+                  create: (context) => AuthCubit(authRepo: AuthRepoImpl()),
                   child: const AuthSignupVeiw(),
                 ));
+      case AppRoutes.homeScreenRoute:
+        return MaterialPageRoute(builder: (context) => const HomeView());
       default:
-        return MaterialPageRoute(builder: (_) => const SplashView());
+        return MaterialPageRoute(builder: (context) => const SplashView());
     }
   }
 }

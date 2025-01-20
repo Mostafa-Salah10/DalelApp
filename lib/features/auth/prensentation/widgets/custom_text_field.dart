@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatefulWidget {
   final String label;
   final bool secure;
+  final void Function(String)? onChanged;
 
-  const CustomTextField({super.key, required this.label, this.secure = false});
+  const CustomTextField(
+      {super.key, required this.label, this.secure = false, this.onChanged});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -20,6 +22,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: EdgeInsets.only(top: SizeConfig.blockHeight! * 3),
       child: TextFormField(
+        onChanged: widget.onChanged,
         validator: (value) {
           if (value!.isEmpty) {
             return "Field Must Be Required";
@@ -42,7 +45,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
           errorBorder: customOutlinBorder(AppColors.red),
           focusedBorder: customOutlinBorder(AppColors.lightGrey),
           focusedErrorBorder: customOutlinBorder(AppColors.lightGrey),
-
         ),
       ),
     );

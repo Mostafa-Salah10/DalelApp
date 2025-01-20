@@ -20,11 +20,11 @@ class Assets {
 
   /// Assets for assetsImagesVector1
   /// lib/assets/images/Vector1.svg
-  static const String assetsImagesVector1 = "lib/assets/images/Vector1.svg";
+  static const String assetsImagesVector1 = "lib/assets/images/Vector1.png";
 
   /// Assets for assetsImagesVector2
   /// lib/assets/images/Vector2.svg
-  static const String assetsImagesVector2 = "lib/assets/images/Vector2.svg";
+  static const String assetsImagesVector2 = "lib/assets/images/Vector2.png";
 
   /// Assets for assetsImagesVerefication
   /// lib/assets/images/verefication.png

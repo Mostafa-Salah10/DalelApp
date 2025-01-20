@@ -4,6 +4,7 @@ import 'package:dalel/core/functions/custom_navigator.dart';
 import 'package:dalel/core/routes/app_routes.dart';
 import 'package:dalel/core/utils/app_text_style.dart';
 import 'package:dalel/core/utils/size_config.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:dalel/generated/l10n.dart';
 
@@ -41,7 +42,12 @@ class _SplashViewState extends State<SplashView> {
           customPushReplacementNavigate(
               context, AppRoutes.onBoardingScreenRoute);
         } else {
-          customPushReplacementNavigate(context, AppRoutes.signUpScreenRoute);
+          var userState = FirebaseAuth.instance.currentUser;
+          if (userState == null) {
+            customPushReplacementNavigate(context, AppRoutes.signInScreenRoute);
+          } else {
+            customPushReplacementNavigate(context, AppRoutes.homeScreenRoute);
+          }
         }
       },
     );

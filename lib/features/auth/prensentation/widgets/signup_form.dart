@@ -1,3 +1,4 @@
+import 'package:dalel/core/functions/toast_alert.dart';
 import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/widgets/button_and_logic_it.dart';
 import 'package:dalel/features/auth/prensentation/widgets/custom_checkbox.dart';
@@ -15,6 +16,12 @@ class SignInForm extends StatelessWidget {
     final AuthCubit authCubit = BlocProvider.of(context);
     return BlocConsumer<AuthCubit, AuthCubitState>(
       listener: (context, state) {
+        if (state is AuthCubitSuccess) {
+          toastAlert(msg: state.msg, color: AppColors.deepBrown);
+          customPushReplacementNavigate(context, AppRoutes.homeScreenRoute);
+        } else if (state is AuthCubitFailure) {
+          toastAlert(msg: state.msg, color: AppColors.red);
+        }
       },
       builder: (context, state) {
         return Form(
@@ -22,15 +29,27 @@ class SignInForm extends StatelessWidget {
             child: Column(
               children: [
                 CustomTextField(
+                  onChanged: (firstname) {
+                    authCubit.firstName = firstname;
+                  },
                   label: S.of(context).firstName,
                 ),
                 CustomTextField(
+                  onChanged: (lastname) {
+                    authCubit.firstName = lastname;
+                  },
                   label: S.of(context).lastName,
                 ),
                 CustomTextField(
+                  onChanged: (email) {
+                    authCubit.email = email;
+                  },
                   label: S.of(context).emailAddress,
                 ),
                 CustomTextField(
+                  onChanged: (pass) {
+                    authCubit.password = pass;
+                  },
                   secure: true,
                   label: S.of(context).pass,
                 ),
@@ -44,7 +63,11 @@ class SignInForm extends StatelessWidget {
                   ],
                 ),
                 const VerticalSpace(height: 10),
-                const ButtonAndLogicIt(),
+                state is AuthCubitLoading
+                    ? CircularProgressIndicator(
+                        color: AppColors.deepBrown,
+                      )
+                    : const ButtonAndLogicIt(),
               ],
             ));
       },

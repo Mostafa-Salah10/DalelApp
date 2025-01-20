@@ -33,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "A big variety of ancient places from all over the world"),
         "descraptionOnboarding3": MessageLookupByLibrary.simpleMessage(
             "AI provide recommendations and helps you to continue the search journey"),
+        "doNotHavaAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t hava an account ? "),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),

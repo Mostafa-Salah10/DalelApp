@@ -18,8 +18,7 @@ class ButtonAndLogicIt extends StatelessWidget {
           onPressed: () {
             if (authCubit.checkValue &&
                 authCubit.signUpKey.currentState!.validate()) {
-              customPushReplacementNavigate(
-                  context, AppRoutes.splashScreenRoute);
+              authCubit.signUpUser();
             }
           },
           text: S.of(context).signUp,
