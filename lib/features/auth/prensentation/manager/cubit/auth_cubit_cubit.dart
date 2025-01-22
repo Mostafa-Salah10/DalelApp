@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dalel/features/auth/data/repository/auth_repo.dart';
 import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -27,6 +28,7 @@ class AuthCubit extends Cubit<AuthCubitState> {
       await authRepo.createUserWithEmailAndPassword(
           email: email!, password: password!);
       await verifyEmailAccont();
+      await createUserProfile();
       emit(AuthCubitSuccess(msg: "Successfully,Verify Your Email Account"));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -72,5 +74,11 @@ class AuthCubit extends Cubit<AuthCubitState> {
 
   Future<void> resetPasswod() async {
     await FirebaseAuth.instance.sendPasswordResetEmail(email: email!);
+  }
+
+  Future<void> createUserProfile() async {
+    final userCollection = FirebaseFirestore.instance.collection('user');
+    await userCollection
+        .add({"first_Name": firstName, "last_Name":lastName, "email": email});
   }
 }

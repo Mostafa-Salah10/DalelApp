@@ -36,7 +36,7 @@ class SignInForm extends StatelessWidget {
                 ),
                 CustomTextField(
                   onChanged: (lastname) {
-                    authCubit.firstName = lastname;
+                    authCubit.lastName = lastname;
                   },
                   label: S.of(context).lastName,
                 ),

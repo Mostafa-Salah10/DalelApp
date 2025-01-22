@@ -15,10 +15,10 @@ class ButtonAndLogicIt extends StatelessWidget {
           color: authCubit.checkValue
               ? AppColors.primaryColor
               : AppColors.lightGrey,
-          onPressed: () {
+          onPressed: () async {
             if (authCubit.checkValue &&
                 authCubit.signUpKey.currentState!.validate()) {
-              authCubit.signUpUser();
+              await authCubit.signUpUser();
             }
           },
           text: S.of(context).signUp,

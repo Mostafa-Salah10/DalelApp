@@ -27,7 +27,7 @@ class CustomFormForgetPass extends StatelessWidget {
           CustomButton(
               onPressed: () async {
                 if (authCubit.forgetPassKey.currentState!.validate()) {
-                  authCubit.resetPasswod().then((value) {
+                  await authCubit.resetPasswod().then((value) {
                     toastAlert(
                         color: AppColors.deepBrown,
                         msg:
