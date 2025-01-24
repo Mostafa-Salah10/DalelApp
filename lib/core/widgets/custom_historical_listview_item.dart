@@ -1,9 +1,10 @@
-import 'package:dalel/core/utils/app_assets.dart';
-
+import 'package:dalel/features/home/data/model/historical_perdios_model.dart';
 import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalListViewItem extends StatelessWidget {
+  final HistoricalPerdiosModel historicalModel;
   const CustomHistoricalListViewItem({
+    required this.historicalModel,
     super.key,
   });
 
@@ -24,7 +25,7 @@ class CustomHistoricalListViewItem extends StatelessWidget {
                 width: SizeConfig.blockWidth! * 15,
                 child: Text(
                     textAlign: TextAlign.center,
-                    "Ancient Egypt",
+                    historicalModel.title,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: AppTextStyle.poppinsstyle14
@@ -32,7 +33,7 @@ class CustomHistoricalListViewItem extends StatelessWidget {
               ),
               SizedBox(
                   width: SizeConfig.blockWidth! * 15,
-                  child: Image.asset(Assets.assetsImagesPyramids)),
+                  child: Image.asset(historicalModel.image)),
             ],
           ),
         ),

@@ -6,9 +6,17 @@ class Assets {
   /// lib/assets/images/800px-Richard_coeur_de_lion 1.png
   static const String assetsImages800pxRichardCoeurDeLion  = "lib/assets/images/800px-Richard_coeur_de_lion 1.png";
 
+  /// Assets for assetsImagesBattleOfMegiddoTripsInEgypt2 1
+  /// lib/assets/images/Battle-of-Megiddo-Trips-in-Egypt-2 1.png
+  static const String assetsImagesBattleOfMegiddoTripsInEgypt2  = "lib/assets/images/Battle-of-Megiddo-Trips-in-Egypt-2 1.png";
+
   /// Assets for assetsImagesHeader
   /// lib/assets/images/header.svg
   static const String assetsImagesHeader = "lib/assets/images/header.svg";
+
+  /// Assets for assetsImagesHyksosInvasionOfAncientEgyptTripsInEgypt 1
+  /// lib/assets/images/Hyksos-Invasion-of-Ancient-Egypt-Trips-in-Egypt 1.png
+  static const String assetsImagesHyksosInvasionOfAncientEgyptTripsInEgypt  = "lib/assets/images/Hyksos-Invasion-of-Ancient-Egypt-Trips-in-Egypt 1.png";
 
   /// Assets for assetsImagesIslamic
   /// lib/assets/images/islamic.png
