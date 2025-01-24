@@ -4,7 +4,7 @@ import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit
 import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/forget_pass_view.dart';
-import 'package:dalel/features/home/presentation/screens/home_view.dart';
+import 'package:dalel/features/home/presentation/widgets/home_nav_bar.dart';
 import 'package:dalel/features/onboarding/presentation/manager/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
 import 'package:dalel/features/splash/presentation/screens/splash_view.dart';
@@ -41,8 +41,8 @@ abstract class AppRouter {
                   create: (context) => AuthCubit(authRepo: AuthRepoImpl()),
                   child: const ForgetPassView(),
                 ));
-      case AppRoutes.homeScreenRoute:
-        return MaterialPageRoute(builder: (context) => const HomeView());
+      case AppRoutes.homeNavBarScreenRoute:
+        return MaterialPageRoute(builder: (context) => HomeNavBar());
       default:
         return MaterialPageRoute(builder: (context) => const SplashView());
     }

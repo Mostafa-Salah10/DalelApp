@@ -17,6 +17,7 @@ void main() async {
   setUpServiceLocator();
   await CashHelper.init();
   checkAuthStateChanges();
+
   runApp(DevicePreview(
       enabled: true,
       builder: (context) {

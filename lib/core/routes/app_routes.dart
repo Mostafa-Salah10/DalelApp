@@ -4,5 +4,5 @@ abstract class AppRoutes {
   static const String signInScreenRoute = '/signin';
   static const String signUpScreenRoute = '/signup';
   static const String forgetPasswordScreenRoute = '/forgetpass';
-  static const String homeScreenRoute = '/home';
+  static const String homeNavBarScreenRoute = '/HomeNavBar';
 }

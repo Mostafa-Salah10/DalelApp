@@ -44,6 +44,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter your registered email below to receive password reset instruction"),
         "havaAccount": MessageLookupByLibrary.simpleMessage(
             "Already i hava an account ? "),
+        "historicalchar":
+            MessageLookupByLibrary.simpleMessage("Historical Characters"),
+        "historicalperiods":
+            MessageLookupByLibrary.simpleMessage("Historical periods"),
+        "historicalsouvenirs":
+            MessageLookupByLibrary.simpleMessage("Historical Souvenirs"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),

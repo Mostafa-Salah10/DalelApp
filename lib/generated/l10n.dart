@@ -319,6 +319,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Historical periods`
+  String get historicalperiods {
+    return Intl.message(
+      'Historical periods',
+      name: 'historicalperiods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Historical Characters`
+  String get historicalchar {
+    return Intl.message(
+      'Historical Characters',
+      name: 'historicalchar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Historical Souvenirs`
+  String get historicalsouvenirs {
+    return Intl.message(
+      'Historical Souvenirs',
+      name: 'historicalsouvenirs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

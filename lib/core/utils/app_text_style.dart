@@ -6,7 +6,7 @@ abstract class AppTextStyle {
   static TextStyle logoStyle = TextStyle(
       color: AppColors.deepBrown,
       fontFamily: "Pacifico",
-      fontSize: SizeConfig.textSize! * 5,
+      fontSize: SizeConfig.textSize! * 6.4,
       fontWeight: FontWeight.w400);
   static TextStyle poppinsstyle14 = TextStyle(
       fontSize: SizeConfig.textSize! * 1.5,
@@ -41,5 +41,11 @@ abstract class AppTextStyle {
     fontSize: SizeConfig.textSize! * 3.8,
     fontFamily: "Saira",
     color: AppColors.black,
+  );
+  static TextStyle poppinsstyle20 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: SizeConfig.textSize! * 2.5,
+    fontFamily: "Poppins",
+    color: AppColors.deepBrown,
   );
 }

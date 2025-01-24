@@ -25,7 +25,10 @@
   "terms":" Terms and Condition",
   "doNotHavaAccount":"Don't hava an account ? ",
   "forgetdecraption":"Enter your registered email below to receive password reset instruction",
-  "sentRest":"Send Verification Link"
+  "sentRest":"Send Verification Link",
+  "historicalperiods":"Historical periods",
+  "historicalchar":"Historical Characters",
+  "historicalsouvenirs":"Historical Souvenirs"
 
 
 

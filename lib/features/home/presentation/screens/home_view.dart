@@ -1,9 +1,8 @@
-import 'package:dalel/core/functions/custom_navigator.dart';
-import 'package:dalel/core/routes/app_routes.dart';
-import 'package:dalel/core/utils/app_colors.dart';
-import 'package:dalel/core/utils/app_text_style.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
+import 'package:dalel/core/utils/custom_historical_char_listview.dart';
+import 'package:dalel/core/widgets/custom_header_text.dart';
+import 'package:dalel/features/home/presentation/widgets/custom_home_appbar.dart';
+import '../../../../core/widgets/custom_historical_listview.dart';
+import '../../../onboarding/presentation/exports_onboarding_feature.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -11,27 +10,22 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.deepBrown,
-        actions: [
-          IconButton(
-              onPressed: () async {
-                await FirebaseAuth.instance.signOut().then((value) {
-                  customPushReplacementNavigate(
-                      context, AppRoutes.signInScreenRoute);
-                });
-              },
-              icon: const Icon(
-                Icons.logout_outlined,
-                color: Colors.white,
-              ))
+        body: Padding(
+      padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 5),
+      child: ListView(
+        children: [
+          const VerticalSpace(height: 5),
+          const CustomHomeAppBar(),
+          const VerticalSpace(height: 2),
+          CustomHeaderText(text: S.of(context).historicalperiods),
+          const CustomHistoricallistView(),
+          const VerticalSpace(height: 2),
+          CustomHeaderText(text: S.of(context).historicalchar),
+          const CustomHistoricalCharListView(),
+          CustomHeaderText(text: S.of(context).historicalsouvenirs),
+          const CustomHistoricalCharListView(),
         ],
       ),
-      body: Center(
-          child: Text(
-        "Home Page",
-        style: AppTextStyle.poppinsstyle28,
-      )),
-    );
+    ));
   }
 }
