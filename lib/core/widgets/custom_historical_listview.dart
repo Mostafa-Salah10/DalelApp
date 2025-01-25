@@ -13,6 +13,7 @@ class CustomHistoricalListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  
     return SizedBox(
       height: SizeConfig.blockHeight! * 13,
       child: ListView.separated(

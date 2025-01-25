@@ -1,5 +1,6 @@
 import 'package:dalel/core/functions/toast_alert.dart';
 import 'package:dalel/core/widgets/custom_historical_listview.dart';
+import 'package:dalel/core/widgets/custom_shimmer.dart';
 import 'package:dalel/features/home/presentation/manager/cubit/home_cubit_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,9 +25,7 @@ class CustomHistoricalPeriodsSection extends StatelessWidget {
           },
           builder: (context, state) {
             return state is HomeCubitHistoricalPeriodsLoading
-                ? CircularProgressIndicator(
-                    color: AppColors.deepBrown,
-                  )
+                ? CustomShimmerHistoricalListView()
                 : CustomHistoricalListView(
                     dataModelList: homeCubit.historicalPeriodsList);
           },

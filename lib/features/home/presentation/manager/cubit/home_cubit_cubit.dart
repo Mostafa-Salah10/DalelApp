@@ -2,8 +2,8 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dalel/features/home/data/model/historical_perdios_model.dart';
+import 'package:dalel/features/home/data/model/historical_periods_wars_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 part 'home_cubit_state.dart';
 
 class HomeCubit extends Cubit<HomeCubitState> {
@@ -11,58 +11,35 @@ class HomeCubit extends Cubit<HomeCubitState> {
   List<HistoricalPerdiosModel> historicalPeriodsList = [];
   HomeCubit() : super(HomeCubitInitial());
 
-  // Future<void> getHistoricalData() async {
-  //   try {
-  //     print('Before fetch Date ****************************************');
-  //     print(historicalPeriodsList.length);
-  //     print('Before fetch Date ****************************************');
-
-  //     emit(HomeCubitHistoricalPeriodsLoading());
-  //     await FirebaseFirestore.instance
-  //         .collection('historical_periods')
-  //         .get()
-  //         .then((value) {
-  //       value.docs.forEach((element) async {
-  //         List<HistoricalPeriodsWarsModel> historicalPeriodswar = [];
-  //         await FirebaseFirestore.instance
-  //             .collection('historical_periods')
-  //             .doc(element.id)
-  //             .collection('historical_periods_wars')
-  //             .get()
-  //             .then((value) {
-  //           value.docs.forEach((war) {
-  //             historicalPeriodswar
-  //                 .add(HistoricalPeriodsWarsModel.fromJason(war.data()));
-  //           });
-  //         });
-  //         historicalPeriodsList.add(HistoricalPerdiosModel.fromjason(
-  //             element.data(), historicalPeriodswar));
-  //       });
-  //       print('After fetch Date ****************************************');
-  //       print(historicalPeriodsList.length);
-  //       print('After fetch Date ****************************************');
-
-  //       emit(HomeCubitHistoricalPeriodsSuccess());
-  //     });
-  //   } on Exception catch (e) {
-  //     emit(HomeCubitHistoricalPeriodsFailure(msg: e.toString()));
-  //   }
-  // }
-
-  Future getHistoricalData() async {
+  Future<void> fetchHistoricalPeriods() async {
+    emit(HomeCubitHistoricalPeriodsLoading());
     try {
-      emit(HomeCubitHistoricalPeriodsLoading());
-      await homeCubit.get().then((value) {
-        value.docs.forEach((element) {
-          historicalPeriodsList
-              .add(HistoricalPerdiosModel.fromjason(element.data()));
-        });
-        emit(HomeCubitHistoricalPeriodsSuccess());
+      await FirebaseFirestore.instance
+          .collection('historical_periods')
+          .get()
+          .then((value) {
+        value.docs.forEach(fetchHistoricalWars);
       });
     } catch (e) {
       emit(HomeCubitHistoricalPeriodsFailure(msg: e.toString()));
     }
   }
 
-  
+  Future<void> fetchHistoricalWars(element) async {
+    await FirebaseFirestore.instance
+        .collection('historical_periods')
+        .doc(element.id)
+        .collection('historical_periods_war')
+        .get()
+        .then((value) {
+      List<HistoricalPeriodsWarsModel> historicalPeriodswar = [];
+      value.docs.forEach((war) {
+        historicalPeriodswar
+            .add(HistoricalPeriodsWarsModel.fromJason(war.data()));
+      });
+      historicalPeriodsList.add(HistoricalPerdiosModel.fromjason(
+          element.data(), historicalPeriodswar));
+    });
+    emit(HomeCubitHistoricalPeriodsSuccess());
+  }
 }
