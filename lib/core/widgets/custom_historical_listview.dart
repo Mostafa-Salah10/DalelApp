@@ -12,39 +12,37 @@ class CustomHistoricallistView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const VerticalSpace(height: 2),
-        BlocConsumer<HomeCubit, HomeCubitState>(
-          listener: (context, state) {
-            if (state is HomeCubitHistoricalPeriodsFailure) {
-              toastAlert(msg: state.msg, color: AppColors.red);
-            }
-          },
-          builder: (context, state) {
-            return state is HomeCubitHistoricalPeriodsLoading
-                ? const CircularProgressIndicator()
-                : SizedBox(
+    return BlocConsumer<HomeCubit, HomeCubitState>(
+      listener: (context, state) {
+        if (state is HomeCubitHistoricalPeriodsFailure) {
+          toastAlert(color: AppColors.red, msg: state.msg);
+        }
+      },
+      builder: (context, state) {
+        final homeCubit = BlocProvider.of<HomeCubit>(context);
+        return state is HomeCubitHistoricalPeriodsLoading
+            ?  CircularProgressIndicator(
+              color: AppColors.deepBrown,
+            )
+            : Column(
+                children: [
+                  const VerticalSpace(height: 2),
+                  SizedBox(
                     height: SizeConfig.blockHeight! * 13,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
                       separatorBuilder: (context, index) =>
                           const HorizontilSpace(width: 3),
-                      itemCount: context
-                          .watch<HomeCubit>()
-                          .historicalPeriodsList
-                          .length,
+                      itemCount: homeCubit.historicalPeriodsList.length,
                       itemBuilder: (context, index) => CustomHistoricalListViewItem(
-                          historicalModel: context
-                              .watch<HomeCubit>()
-                              .historicalPeriodsList[index],
-                        ),
+                        historicalModel: homeCubit.historicalPeriodsList[index],
+                      ),
                     ),
-                  );
-          },
-        ),
-        const VerticalSpace(height: 2),
-      ],
+                  ),
+                  const VerticalSpace(height: 2),
+                ],
+              );
+      },
     );
   }
 }

@@ -10,6 +10,8 @@ class CustomHistoricalListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     return SizedBox(
       width: SizeConfig.screenWidth! / 2.35,
       child: Card(
