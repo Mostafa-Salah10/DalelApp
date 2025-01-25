@@ -1,4 +1,4 @@
-import 'package:dalel/core/utils/custom_historical_char_listview_item.dart';
+import 'package:dalel/core/widgets/custom_historical_char_listview_item.dart';
 import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalCharListView extends StatelessWidget {

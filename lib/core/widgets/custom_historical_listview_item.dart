@@ -1,8 +1,8 @@
-import 'package:dalel/features/home/data/model/historical_perdios_model.dart';
+import 'package:dalel/core/model/data_model.dart';
 import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalListViewItem extends StatelessWidget {
-  final HistoricalPerdiosModel historicalModel;
+  final DataModel historicalModel;
   const CustomHistoricalListViewItem({
     required this.historicalModel,
     super.key,

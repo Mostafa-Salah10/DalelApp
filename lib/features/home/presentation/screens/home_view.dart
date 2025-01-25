@@ -1,7 +1,7 @@
-import 'package:dalel/core/utils/custom_historical_char_listview.dart';
+import 'package:dalel/core/widgets/custom_historical_char_listview.dart';
 import 'package:dalel/core/widgets/custom_header_text.dart';
 import 'package:dalel/features/home/presentation/widgets/custom_home_appbar.dart';
-import '../../../../core/widgets/custom_historical_listview.dart';
+import '../widgets/custom_historical_periods_section.dart';
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
 
 class HomeView extends StatelessWidget {
@@ -18,7 +18,7 @@ class HomeView extends StatelessWidget {
           const CustomHomeAppBar(),
           const VerticalSpace(height: 2),
           CustomHeaderText(text: S.of(context).historicalperiods),
-          const CustomHistoricallistView(),
+          const CustomHistoricalPeriodsSection(),
           const VerticalSpace(height: 2),
           CustomHeaderText(text: S.of(context).historicalchar),
           const CustomHistoricalCharListView(),

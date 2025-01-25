@@ -63,4 +63,6 @@ class HomeCubit extends Cubit<HomeCubitState> {
       emit(HomeCubitHistoricalPeriodsFailure(msg: e.toString()));
     }
   }
+
+  
 }
