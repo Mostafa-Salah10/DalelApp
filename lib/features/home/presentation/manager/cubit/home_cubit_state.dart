@@ -12,3 +12,21 @@ final class HomeCubitHistoricalPeriodsFailure extends HomeCubitState {
   final String msg;
   HomeCubitHistoricalPeriodsFailure({required this.msg});
 }
+
+final class HomeCubitHistoricalCharsLoading extends HomeCubitState {}
+
+final class HomeCubitHistoricalCharsSuccess extends HomeCubitState {}
+
+final class HomeCubitHistoricalCharsFailure extends HomeCubitState {
+  final String msg;
+  HomeCubitHistoricalCharsFailure({required this.msg});
+}
+
+final class HomeCubitHistoricalSouvenirsLoading extends HomeCubitState {}
+
+final class HomeCubitHistoricalSouvenirsSuccess extends HomeCubitState {}
+
+final class HomeCubitHistoricalSouvenirsFailure extends HomeCubitState {
+  final String msg;
+  HomeCubitHistoricalSouvenirsFailure({required this.msg});
+}

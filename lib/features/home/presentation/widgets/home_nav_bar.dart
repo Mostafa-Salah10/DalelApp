@@ -33,7 +33,10 @@ class HomeNavBar extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       BlocProvider(
-        create: (context) => HomeCubit()..fetchHistoricalPeriods(),
+        create: (context) => HomeCubit()
+          ..fetchHistoricalPeriods()
+          ..fetchHistoricalCharscters()
+          ..fetchHistoricalSouvenirs(),
         child: const HomeView(),
       ),
       const CartView(),

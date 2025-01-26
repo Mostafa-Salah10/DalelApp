@@ -1,4 +1,5 @@
 import 'package:dalel/core/functions/toast_alert.dart';
+import 'package:dalel/core/widgets/general_loading_buttion.dart';
 import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/widgets/custom_text_field.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -57,9 +58,7 @@ class CustomSignInForm extends StatelessWidget {
               ),
               const VerticalSpace(height: 12),
               state is AuthCubitLoading
-                  ? CircularProgressIndicator(
-                      color: AppColors.deepBrown,
-                    )
+                  ? const GeneralLoadingButtion()
                   : CustomButton(
                       onPressed: () async {
                         if (authCubit.signInKey.currentState!.validate()) {

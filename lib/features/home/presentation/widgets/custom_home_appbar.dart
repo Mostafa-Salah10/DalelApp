@@ -1,4 +1,5 @@
 import 'package:dalel/core/utils/app_assets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
@@ -14,10 +15,18 @@ class CustomHomeAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SvgPicture.asset(Assets.assetsImagesHeader),
-        Text(
-          S.of(context).appName,
-          style: AppTextStyle.logoStyle
-              .copyWith(fontSize: SizeConfig.textSize! * 3.3),
+        GestureDetector(
+          onTap: () async {
+            await FirebaseAuth.instance.signOut().then((value) {
+              customPushReplacementNavigate(
+                  context, AppRoutes.signInScreenRoute);
+            });
+          },
+          child: Text(
+            S.of(context).appName,
+            style: AppTextStyle.logoStyle
+                .copyWith(fontSize: SizeConfig.textSize! * 3.3),
+          ),
         )
       ],
     );

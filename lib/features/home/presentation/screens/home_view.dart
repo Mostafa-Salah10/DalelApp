@@ -1,5 +1,6 @@
-import 'package:dalel/core/widgets/custom_historical_char_listview.dart';
+import 'package:dalel/features/home/presentation/widgets/custom_historical_char_section.dart';
 import 'package:dalel/core/widgets/custom_header_text.dart';
+import 'package:dalel/features/home/presentation/widgets/custom_historical_souvenirs_section.dart';
 import 'package:dalel/features/home/presentation/widgets/custom_home_appbar.dart';
 import '../widgets/custom_historical_periods_section.dart';
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
@@ -12,7 +13,8 @@ class HomeView extends StatelessWidget {
     return Scaffold(
         body: Padding(
       padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 5),
-      child: ListView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const VerticalSpace(height: 5),
           const CustomHomeAppBar(),
@@ -21,9 +23,9 @@ class HomeView extends StatelessWidget {
           const CustomHistoricalPeriodsSection(),
           const VerticalSpace(height: 2),
           CustomHeaderText(text: S.of(context).historicalchar),
-          const CustomHistoricalCharListView(),
+          const CustomHistoricalCharSection(),
           CustomHeaderText(text: S.of(context).historicalsouvenirs),
-          const CustomHistoricalCharListView(),
+          const CustomHistoricalSouvenirsSection(),
         ],
       ),
     ));

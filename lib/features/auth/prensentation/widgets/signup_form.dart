@@ -1,4 +1,5 @@
 import 'package:dalel/core/functions/toast_alert.dart';
+import 'package:dalel/core/widgets/general_loading_buttion.dart';
 import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
 import 'package:dalel/features/auth/prensentation/widgets/button_and_logic_it.dart';
 import 'package:dalel/features/auth/prensentation/widgets/custom_checkbox.dart';
@@ -64,9 +65,7 @@ class SignInForm extends StatelessWidget {
                 ),
                 const VerticalSpace(height: 10),
                 state is AuthCubitLoading
-                    ? CircularProgressIndicator(
-                        color: AppColors.deepBrown,
-                      )
+                    ? const GeneralLoadingButtion()
                     : const ButtonAndLogicIt(),
               ],
             ));
