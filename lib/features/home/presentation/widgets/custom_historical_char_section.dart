@@ -25,6 +25,7 @@ class CustomHistoricalCharSection extends StatelessWidget {
             return state is HomeCubitHistoricalCharsLoading
                 ? CustomShimmerHistoricalLongListview()
                 : CustomHistoricalLongListView(
+                    route: AppRoutes.charsDetailsScreenRoute,
                     dataList:
                         BlocProvider.of<HomeCubit>(context).historicaCharsList);
           },

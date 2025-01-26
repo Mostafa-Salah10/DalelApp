@@ -6,17 +6,16 @@ import 'package:dalel/features/search/presentation/screens/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
-
 import '../manager/cubit/home_cubit_cubit.dart';
 
-class HomeNavBar extends StatelessWidget {
-  HomeNavBar({super.key});
-  final PersistentTabController _controller =
-      PersistentTabController(initialIndex: 0);
+PersistentTabController _controller = PersistentTabController();
 
+class HomeNavBar extends StatelessWidget {
+  const HomeNavBar({super.key});
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
+      stateManagement: true,
       context,
       controller: _controller,
       screens: _buildScreens(),

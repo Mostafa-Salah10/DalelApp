@@ -13,7 +13,11 @@ class CustomShimmerHistoricalListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Skeletonizer(
         enabled: true,
-        child: CustomHistoricalListView(dataModelList: _dummyList));
+        child: CustomHistoricalListView(
+          dataModelList: _dummyList,
+          route: AppRoutes.homeNavBarScreenRoute,
+          recommendations: [],
+        ));
   }
 
   final List<DataModel> _dummyList = [
@@ -28,18 +32,22 @@ class CustomShimmerHistoricalListView extends StatelessWidget {
   ];
 }
 
-
 class CustomShimmerHistoricalLongListview extends StatelessWidget {
   CustomShimmerHistoricalLongListview({super.key});
   @override
   Widget build(BuildContext context) {
-    return CustomHistoricalLongListView(dataList: _dummyList);
+    return Skeletonizer(
+        enabled: true,
+        child: CustomHistoricalLongListView(
+          dataList: _dummyList,
+          route: AppRoutes.charsDetailsScreenRoute,
+        ));
   }
 
   final List<DataModel> _dummyList = [
     DataModel(
         title: 'Ancient Egypt',
-        image:Assets.assetsImagesSalahalDinmohamedsaad,
+        image: Assets.assetsImagesSalahalDinmohamedsaad,
         decrtiption: 'Disha'),
     DataModel(
         title: 'Ancient Egypt',

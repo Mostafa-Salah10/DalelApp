@@ -42,7 +42,8 @@ abstract class AppRouter {
                   child: const ForgetPassView(),
                 ));
       case AppRoutes.homeNavBarScreenRoute:
-        return MaterialPageRoute(builder: (context) => HomeNavBar());
+        return MaterialPageRoute(builder: (context) => const HomeNavBar());
+
       default:
         return MaterialPageRoute(builder: (context) => const SplashView());
     }

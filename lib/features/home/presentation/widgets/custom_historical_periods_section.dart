@@ -27,6 +27,8 @@ class CustomHistoricalPeriodsSection extends StatelessWidget {
             return state is HomeCubitHistoricalPeriodsLoading
                 ? CustomShimmerHistoricalListView()
                 : CustomHistoricalListView(
+                    recommendations: homeCubit.historicaCharsList,
+                    route: AppRoutes.periodsDetailsScreenRoute,
                     dataModelList: homeCubit.historicalPeriodsList);
           },
         ),

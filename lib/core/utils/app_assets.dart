@@ -12,23 +12,23 @@ class Assets {
 
   /// Assets for assetsImagesFrame 27
   /// lib/assets/images/Frame 27.png
-  static const String assetsImagesFrame = "lib/assets/images/Frame 27.png";
+  static const String assetsImagesFrame  = "lib/assets/images/Frame 27.png";
 
   /// Assets for assetsImagesFrame 41
   /// lib/assets/images/Frame 41.png
-  static const String assetsImagesFrame40  = "lib/assets/images/Frame 41.png";
+  static const String assetsImagesFrame40 = "lib/assets/images/Frame 41.png";
 
   /// Assets for assetsImagesFrame 411
   /// lib/assets/images/Frame 41-1.png
-  static const String assetsImagesFrame41  = "lib/assets/images/Frame 41-1.png";
+  static const String assetsImagesFrame41 = "lib/assets/images/Frame 41-1.png";
 
   /// Assets for assetsImagesFrame 412
   /// lib/assets/images/Frame 41-2.png
-  static const String assetsImagesFrame42  = "lib/assets/images/Frame 41-2.png";
+  static const String assetsImagesFrame42 = "lib/assets/images/Frame 41-2.png";
 
   /// Assets for assetsImagesFrame 413
   /// lib/assets/images/Frame 41-3.png
-  static const String assetsImagesFrame43  = "lib/assets/images/Frame 41-3.png";
+  static const String assetsImagesFrame43 = "lib/assets/images/Frame 41-3.png";
 
   /// Assets for assetsImagesHeader
   /// lib/assets/images/header.svg
@@ -36,7 +36,7 @@ class Assets {
 
   /// Assets for assetsImagesHyksosInvasionOfAncientEgyptTripsInEgypt 1
   /// lib/assets/images/Hyksos-Invasion-of-Ancient-Egypt-Trips-in-Egypt 1.png
-  static const String assetsImagesHyksosInvasionOfAncientEgyptTripsInEgypt  = "lib/assets/images/Hyksos-Invasion-of-Ancient-Egypt-Trips-in-Egypt 1.png";
+  static const String assetsImagesHyksosInvasionOfAncientEgyptTripsInEgypt = "lib/assets/images/Hyksos-Invasion-of-Ancient-Egypt-Trips-in-Egypt 1.png";
 
   /// Assets for assetsImagesIslamic
   /// lib/assets/images/islamic.png
@@ -60,7 +60,7 @@ class Assets {
 
   /// Assets for assetsImagesPortraitOfTheQianlongEmperorInCourtDress 1
   /// lib/assets/images/Portrait_of_the_Qianlong_Emperor_in_Court_Dress 1.png
-  static const String assetsImagesPortraitOfTheQianlongEmperorInCourtDress  = "lib/assets/images/Portrait_of_the_Qianlong_Emperor_in_Court_Dress 1.png";
+  static const String assetsImagesPortraitOfTheQianlongEmperorInCourtDress1 = "lib/assets/images/Portrait_of_the_Qianlong_Emperor_in_Court_Dress 1.png";
 
   /// Assets for assetsImagesPyramids
   /// lib/assets/images/pyramids.png
@@ -72,15 +72,23 @@ class Assets {
 
   /// Assets for assetsImagesSiteBattleOfHattin 1
   /// lib/assets/images/Site-Battle-of-Hattin 1.png
-  static const String assetsImagesSiteBattleOfHattin  = "lib/assets/images/Site-Battle-of-Hattin 1.png";
+  static const String assetsImagesSiteBattleOfHattin1 = "lib/assets/images/Site-Battle-of-Hattin 1.png";
 
   /// Assets for assetsImagesSuccess
   /// lib/assets/images/success.png
   static const String assetsImagesSuccess = "lib/assets/images/success.png";
 
+  /// Assets for assetsImagesVector
+  /// lib/assets/images/Vector.png
+  static const String assetsImagesVector = "lib/assets/images/Vector.png";
+
   /// Assets for assetsImagesVector1
   /// lib/assets/images/Vector1.png
   static const String assetsImagesVector1 = "lib/assets/images/Vector1.png";
+
+  /// Assets for assetsImagesVector1 (2)
+  /// lib/assets/images/Vector1 (2).png
+  static const String assetsImagesVector11 = "lib/assets/images/Vector1 (2).png";
 
   /// Assets for assetsImagesVector2
   /// lib/assets/images/Vector2.png
@@ -89,5 +97,8 @@ class Assets {
   /// Assets for assetsImagesVerefication
   /// lib/assets/images/verefication.png
   static const String assetsImagesVerefication = "lib/assets/images/verefication.png";
+  static const String assetsImagesQueen = "lib/assets/images/queen.png";
+  static const String assetsImagesBrid = "lib/assets/images/brid.png";
+  static const String assetsImagesEllipse = "lib/assets/images/Ellipse.png";
 }
 

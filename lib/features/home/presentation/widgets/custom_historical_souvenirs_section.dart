@@ -25,6 +25,7 @@ class CustomHistoricalSouvenirsSection extends StatelessWidget {
             return state is HomeCubitHistoricalSouvenirsSuccess
                 ? CustomShimmerHistoricalLongListview()
                 : CustomHistoricalLongListView(
+                    route: AppRoutes.souvinersDetailsScreenRoute,
                     dataList: BlocProvider.of<HomeCubit>(context)
                         .historicaSouvenirsList);
           },

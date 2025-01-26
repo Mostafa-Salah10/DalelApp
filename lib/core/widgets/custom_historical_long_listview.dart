@@ -5,9 +5,11 @@ import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalLongListView extends StatelessWidget {
   final List<DataModel> dataList;
+  final String route;
   const CustomHistoricalLongListView({
     super.key,
     required this.dataList,
+    required this.route,
   });
 
   @override
@@ -19,8 +21,11 @@ class CustomHistoricalLongListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) => const HorizontilSpace(width: 2),
         itemCount: dataList.length,
-        itemBuilder: (context, index) =>
-            CustomHistoricalLonglistViewItem(mylist: dataList[index]),
+        itemBuilder: (context, index) => CustomHistoricalLonglistViewItem(
+          recommendations: dataList,
+          mylist: dataList[index],
+          route: route,
+        ),
       ),
     );
   }

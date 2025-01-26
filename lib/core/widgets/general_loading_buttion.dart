@@ -28,7 +28,7 @@ class GeneralLoadingButtion extends StatelessWidget {
             width: 20,
           ),
           Text(
-            "Please Wait...",
+            "Please Wait ....",
             style: AppTextStyle.poppinsstyle16.copyWith(color: Colors.white),
           ),
         ],

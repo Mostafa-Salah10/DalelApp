@@ -7,13 +7,15 @@ class CustomHistoricalListView extends StatelessWidget {
   const CustomHistoricalListView({
     super.key,
     required this.dataModelList,
+    required this.route, required this.recommendations,
   });
 
   final List<DataModel> dataModelList;
+  final List<DataModel> recommendations;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
-  
     return SizedBox(
       height: SizeConfig.blockHeight! * 13,
       child: ListView.separated(
@@ -21,6 +23,8 @@ class CustomHistoricalListView extends StatelessWidget {
         separatorBuilder: (context, index) => const HorizontilSpace(width: 3),
         itemCount: dataModelList.length,
         itemBuilder: (context, index) => CustomHistoricalListViewItem(
+          recommendations: recommendations,
+          route: route,
           historicalModel: dataModelList[index],
         ),
       ),
