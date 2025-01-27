@@ -5,13 +5,13 @@ import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalListViewItem extends StatelessWidget {
   final DataModel historicalModel;
-  final String route;
-  final List<DataModel> recommendations;
+  final String? route;
+  final List<DataModel>? recommendations;
   const CustomHistoricalListViewItem({
     required this.historicalModel,
-    required this.route,
+    this.route,
     super.key,
-    required this.recommendations,
+    this.recommendations,
   });
 
   @override
@@ -27,9 +27,6 @@ class CustomHistoricalListViewItem extends StatelessWidget {
                         recommendations as List<HistoricalDataModel>,
                     historicalDataModel:
                         historicalModel as HistoricalDataModel)));
-          }
-          if(route ==AppRoutes.periodsDetailsWarsScreenRoute){
-            
           }
         },
         child: Card(

@@ -1,6 +1,7 @@
 import 'package:dalel/core/utils/app_colors.dart';
 import 'package:dalel/features/cart/presentation/screens/cart_view.dart';
 import 'package:dalel/features/home/presentation/screens/home_view.dart';
+import 'package:dalel/features/profile/presentation/manager/cubit/profile_cubit.dart';
 import 'package:dalel/features/profile/presentation/screens/profile_view.dart';
 import 'package:dalel/features/search/presentation/screens/search_view.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,10 @@ class HomeNavBar extends StatelessWidget {
       ),
       const CartView(),
       const SearchView(),
-      const ProfileView(),
+      BlocProvider(
+        create: (context) => ProfileCubit()..fetchUser(),
+        child: const ProfileView(),
+      ),
     ];
   }
 

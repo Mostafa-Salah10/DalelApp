@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "agreeTerms":
             MessageLookupByLibrary.simpleMessage("I have agree to our"),
         "appName": MessageLookupByLibrary.simpleMessage("Dalel"),
@@ -35,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "AI provide recommendations and helps you to continue the search journey"),
         "doNotHavaAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t hava an account ? "),
+        "editprofile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
@@ -42,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forget Password"),
         "forgetdecraption": MessageLookupByLibrary.simpleMessage(
             "Enter your registered email below to receive password reset instruction"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
         "havaAccount": MessageLookupByLibrary.simpleMessage(
             "Already i hava an account ? "),
         "historicalchar":
@@ -51,11 +54,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "historicalsouvenirs":
             MessageLookupByLibrary.simpleMessage("Historical Souvenirs"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
+        "logOut": MessageLookupByLibrary.simpleMessage("Log Out"),
         "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "notifacation": MessageLookupByLibrary.simpleMessage("Notification"),
         "pass": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "security": MessageLookupByLibrary.simpleMessage("Security"),
         "sentRest":
             MessageLookupByLibrary.simpleMessage("Send Verification Link"),
+        "setting": MessageLookupByLibrary.simpleMessage("Settings"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skipText": MessageLookupByLibrary.simpleMessage("Skip"),

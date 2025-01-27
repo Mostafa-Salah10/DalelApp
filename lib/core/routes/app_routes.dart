@@ -6,11 +6,6 @@ abstract class AppRoutes {
   static const String forgetPasswordScreenRoute = '/forgetpass';
   static const String homeNavBarScreenRoute = '/homeNavBar';
   static const String periodsDetailsScreenRoute = '/historicalPeriodsDetails';
-  static const String souvinersDetailsScreenRoute =
-      '/historicalsouvinersDetails';
-  static const String periodsDetailsWarsScreenRoute =
-      '/historicalPeriodsDetailswars';
   static const String charsDetailsScreenRoute = '/historicalcharsDetails';
-  static const String charsDetailsWarsScreenRoute =
-      '/historicalcharsDetailswars';
+  static const String profileScreenRoute = '/profile';
 }

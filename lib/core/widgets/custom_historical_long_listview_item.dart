@@ -5,14 +5,14 @@ import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalLonglistViewItem extends StatelessWidget {
   final DataModel mylist;
-  final String route;
-  final List<DataModel> recommendations;
+  final String? route;
+  final List<DataModel>? recommendations;
 
   const CustomHistoricalLonglistViewItem({
     required this.mylist,
     super.key,
-    required this.route,
-    required this.recommendations,
+    this.route,
+    this.recommendations,
   });
 
   @override
@@ -43,16 +43,13 @@ class CustomHistoricalLonglistViewItem extends StatelessWidget {
                   height: SizeConfig.screenHeight! / 9,
                   child: Image.asset(
                     mylist.image,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                   )),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 4.0),
-                child: Text(
-                  textAlign: TextAlign.center,
-                  mylist.title,
-                  style: AppTextStyle.poppinsstyle14
-                      .copyWith(fontSize: SizeConfig.textSize! * 1.5),
-                ),
+              Text(
+                textAlign: TextAlign.center,
+                mylist.title,
+                style: AppTextStyle.poppinsstyle14
+                    .copyWith(fontSize: SizeConfig.textSize! * 1.5),
               )
             ],
           ),

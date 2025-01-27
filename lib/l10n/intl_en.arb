@@ -28,7 +28,17 @@
   "sentRest":"Send Verification Link",
   "historicalperiods":"Historical periods",
   "historicalchar":"Historical Characters",
-  "historicalsouvenirs":"Historical Souvenirs"
+  "historicalsouvenirs":"Historical Souvenirs",
+  "profile":"Profile",
+  "editprofile":"Edit Profile",
+  "notifacation":"Notification",
+  "Account":"Account",
+  "general":"General",
+  "setting":"Settings",
+  "security":"Security",
+  "privacy":"Privacy Policy",
+  "logOut":"Log Out"
+
 
 
 

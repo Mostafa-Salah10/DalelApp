@@ -7,12 +7,13 @@ class CustomHistoricalListView extends StatelessWidget {
   const CustomHistoricalListView({
     super.key,
     required this.dataModelList,
-    required this.route, required this.recommendations,
+    this.route,
+    this.recommendations,
   });
 
   final List<DataModel> dataModelList;
-  final List<DataModel> recommendations;
-  final String route;
+  final List<DataModel>? recommendations;
+  final String? route;
 
   @override
   Widget build(BuildContext context) {

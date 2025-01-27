@@ -15,7 +15,7 @@ class CustomHistoricalPeriodsWarSection extends StatelessWidget {
         CustomHistoricalListView(
             recommendations: recommendations,
             dataModelList: warsModel,
-            route: AppRoutes.periodsDetailsWarsScreenRoute),
+          ),
         const VerticalSpace(height: 1.3),
       ],
     );

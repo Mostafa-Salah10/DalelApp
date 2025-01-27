@@ -2,6 +2,7 @@ import 'package:dalel/core/model/data_model.dart';
 import 'package:dalel/core/utils/app_assets.dart';
 import 'package:dalel/core/widgets/custom_historical_listview.dart';
 import 'package:dalel/core/widgets/custom_historical_long_listview.dart';
+
 import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
@@ -15,8 +16,6 @@ class CustomShimmerHistoricalListView extends StatelessWidget {
         enabled: true,
         child: CustomHistoricalListView(
           dataModelList: _dummyList,
-          route: AppRoutes.homeNavBarScreenRoute,
-          recommendations: [],
         ));
   }
 
@@ -40,7 +39,6 @@ class CustomShimmerHistoricalLongListview extends StatelessWidget {
         enabled: true,
         child: CustomHistoricalLongListView(
           dataList: _dummyList,
-          route: AppRoutes.charsDetailsScreenRoute,
         ));
   }
 
@@ -63,3 +61,4 @@ class CustomShimmerHistoricalLongListview extends StatelessWidget {
         decrtiption: 'Disha')
   ];
 }
+

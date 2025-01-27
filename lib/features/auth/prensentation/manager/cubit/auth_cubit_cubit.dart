@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dalel/core/utils/app_assets.dart';
 import 'package:dalel/features/auth/data/repository/auth_repo.dart';
 import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -78,7 +79,11 @@ class AuthCubit extends Cubit<AuthCubitState> {
 
   Future<void> createUserProfile() async {
     final userCollection = FirebaseFirestore.instance.collection('user');
-    await userCollection
-        .add({"first_Name": firstName, "last_Name":lastName, "email": email});
+    await userCollection.add({
+      "first_Name": firstName,
+      "last_Name": lastName,
+      "email": email,
+      "image": Assets.assetsImagesPicture
+    });
   }
 }
