@@ -17,8 +17,8 @@ class CustomSignInForm extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthCubitState>(
       listener: (context, state) {
         if (state is AuthCubitSuccess) {
-          toastAlert(msg: state.msg, color: AppColors.deepBrown);
-          customPushReplacementNavigate(context, AppRoutes.homeNavBarScreenRoute);
+          customPushReplacementNavigate(
+              context, AppRoutes.bottomNavBarScreenRoute);
         } else if (state is AuthCubitFailure) {
           toastAlert(msg: state.msg, color: AppColors.red);
         }

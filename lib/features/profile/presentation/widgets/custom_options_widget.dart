@@ -1,9 +1,6 @@
-import 'package:dalel/features/auth/data/repository/auth_repo_impl.dart';
-import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit.dart';
-import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
+import 'package:dalel/core/functions/alert_dialog.dart';
 import 'package:dalel/features/profile/presentation/widgets/custom_horizontal_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
 
@@ -81,18 +78,15 @@ class CustomOptionsWidget extends StatelessWidget {
         const VerticalSpace(height: 2),
         CustomHorizontalOptions(
           onTap: () async {
-            await FirebaseAuth.instance.signOut().then((value) {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => BlocProvider(
-                          create: (context) =>
-                              AuthCubit(authRepo: AuthRepoImpl()),
-                          child: const AuthSigninVeiw(),
-                        )),
-                
-              );
-            });
+            alerDialog(
+                context: context,
+                msg: "Do You Want To Log Out ",
+                onConfirmBtnTap: () async {
+                  await FirebaseAuth.instance.signOut().then((value) {
+                    customPushRemoveUntileNavigate(
+                        context, AppRoutes.signInScreenRoute);
+                  });
+                });
           },
           text: S.of(context).logOut,
           icon: Icons.logout,

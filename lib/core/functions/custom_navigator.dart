@@ -7,3 +7,10 @@ void customPushNavigate(BuildContext context, String route) {
 void customPushReplacementNavigate(BuildContext context, String route) {
   Navigator.of(context).pushReplacementNamed(route);
 }
+
+void customPushRemoveUntileNavigate(BuildContext context, String route) {
+  Navigator.of(context).pushNamedAndRemoveUntil(
+    route,
+    (route) => true,
+  );
+}
