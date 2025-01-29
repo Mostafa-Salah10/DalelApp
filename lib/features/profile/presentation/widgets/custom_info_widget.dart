@@ -34,7 +34,7 @@ class PersonalInformationWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: SizeConfig.blockWidth! * 60,
+              width: SizeConfig.blockWidth! * 53,
               child: Text(
                 currentUser.user!.email,
                 style: AppTextStyle.poppinsstyle16.copyWith(

@@ -49,7 +49,7 @@ class HistoricalDetailsView extends StatelessWidget {
               warsModel: historicalDataModel.wars),
           const CustomHeaderText(text: "Recommendations"),
           CustomHistoricalCharSuggistionSection(
-              recommendations: recommendations)
+              recommendations: recommendations),
         ],
       ),
     ));

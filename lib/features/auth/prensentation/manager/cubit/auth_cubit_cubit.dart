@@ -79,7 +79,7 @@ class AuthCubit extends Cubit<AuthCubitState> {
 
   Future<void> createUserProfile() async {
     final userCollection = FirebaseFirestore.instance.collection('user');
-    await userCollection.add({
+    await userCollection.doc(email).set({
       "first_Name": firstName,
       "last_Name": lastName,
       "email": email,

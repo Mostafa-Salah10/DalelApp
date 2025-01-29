@@ -8,4 +8,6 @@ abstract class AppRoutes {
   static const String charsDetailsScreenRoute = '/historicalcharsDetails';
   static const String profileScreenRoute = '/profile';
   static const String bottomNavBarScreenRoute = '/bottomNavBar';
+  static const String shoppingCartScreenRoute = '/shoppingCart';
+  static const String bazarDatailsScreenRoute = '/bazarDatails';
 }

@@ -82,8 +82,10 @@ class HomeCubit extends Cubit<HomeCubitState> {
           .get()
           .then((value) {
         value.docs.forEach((element) {
-          historicaSouvenirsList
-              .add(DataModel.fromJason(jason: element.data()));
+          if (element.data()['category'] == 'general') {
+            historicaSouvenirsList
+                .add(DataModel.fromJason(jason: element.data()));
+          }
         });
       });
       emit(HomeCubitHistoricalSouvenirsSuccess());
@@ -91,5 +93,4 @@ class HomeCubit extends Cubit<HomeCubitState> {
       emit(HomeCubitHistoricalSouvenirsFailure(msg: e.toString()));
     }
   }
-
 }

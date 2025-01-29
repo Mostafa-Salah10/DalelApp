@@ -439,6 +439,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Bazar`
+  String get bazar {
+    return Intl.message(
+      'Bazar',
+      name: 'bazar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History Books`
+  String get historyBooks {
+    return Intl.message(
+      'History Books',
+      name: 'historyBooks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Cart`
+  String get cart {
+    return Intl.message(
+      'My Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

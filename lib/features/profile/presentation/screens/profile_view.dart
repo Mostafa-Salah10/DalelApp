@@ -10,7 +10,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 3),
+        padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 5),
         child: ListView(
           children: [
             const VerticalSpace(height: 2),

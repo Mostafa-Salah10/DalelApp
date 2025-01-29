@@ -11,22 +11,25 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const VerticalSpace(height: 5),
-          const CustomHomeAppBar(),
-          const VerticalSpace(height: 2),
-          CustomHeaderText(text: S.of(context).historicalperiods),
-          const CustomHistoricalPeriodsSection(),
-          const VerticalSpace(height: 2),
-          CustomHeaderText(text: S.of(context).historicalchar),
-          const CustomHistoricalCharSection(),
-          CustomHeaderText(text: S.of(context).historicalsouvenirs),
-          const CustomHistoricalSouvenirsSection(),
-        ],
+        body: SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockWidth! * 5),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const VerticalSpace(height: 2),
+              const CustomHomeAppBar(),
+              const VerticalSpace(height: 2),
+              CustomHeaderText(text: S.of(context).historicalperiods),
+              const CustomHistoricalPeriodsSection(),
+              CustomHeaderText(text: S.of(context).historicalchar),
+              const CustomHistoricalCharSection(),
+              CustomHeaderText(text: S.of(context).historicalsouvenirs),
+              const CustomHistoricalSouvenirsSection(),
+            ],
+          ),
+        ),
       ),
     ));
   }

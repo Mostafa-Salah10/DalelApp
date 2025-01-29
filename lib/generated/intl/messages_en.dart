@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "agreeTerms":
             MessageLookupByLibrary.simpleMessage("I have agree to our"),
         "appName": MessageLookupByLibrary.simpleMessage("Dalel"),
+        "bazar": MessageLookupByLibrary.simpleMessage("Bazar"),
+        "cart": MessageLookupByLibrary.simpleMessage("My Cart"),
         "createAcounte":
             MessageLookupByLibrary.simpleMessage("Create an Account"),
         "descraptionOnboarding1": MessageLookupByLibrary.simpleMessage(
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Historical periods"),
         "historicalsouvenirs":
             MessageLookupByLibrary.simpleMessage("Historical Souvenirs"),
+        "historyBooks": MessageLookupByLibrary.simpleMessage("History Books"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "logOut": MessageLookupByLibrary.simpleMessage("Log Out"),
         "loginNow": MessageLookupByLibrary.simpleMessage("Loging Now"),

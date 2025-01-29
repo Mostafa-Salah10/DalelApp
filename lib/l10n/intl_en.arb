@@ -37,7 +37,11 @@
   "setting":"Settings",
   "security":"Security",
   "privacy":"Privacy Policy",
-  "logOut":"Log Out"
+  "logOut":"Log Out",
+  "bazar":"Bazar",
+  "historyBooks":"History Books",
+  "cart":"My Cart"
+
 
 
 

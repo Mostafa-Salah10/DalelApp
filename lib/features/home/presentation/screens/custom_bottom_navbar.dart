@@ -1,4 +1,5 @@
 import 'package:dalel/core/utils/app_colors.dart';
+import 'package:dalel/features/cart/presentation/manager/cubit/cart_cubit.dart';
 import 'package:dalel/features/cart/presentation/screens/cart_view.dart';
 import 'package:dalel/features/home/presentation/manager/cubit/home_cubit_cubit.dart';
 import 'package:dalel/features/home/presentation/screens/home_view.dart';
@@ -24,7 +25,13 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
         ..fetchHistoricalPeriods(),
       child: const HomeView(),
     ),
-    const CartView(),
+    BlocProvider(
+      create: (context) => CartCubit()
+        ..fetchHistoricalPeriods()
+        ..fetchHistoricalBooks()
+        ..fetchHistoricalSouviners(),
+      child: const CartView(),
+    ),
     const SearchView(),
     BlocProvider(
       create: (context) => ProfileCubit()..fetchUser(),
@@ -42,7 +49,7 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
             topLeft: Radius.circular(15), topRight: Radius.circular(15)),
         child: BottomAppBar(
           color: AppColors.primaryColor,
-          height: 60,
+          height: 70,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -73,7 +80,8 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
                   },
                   icon: currentIndex == 2
                       ? Icon(Icons.search, color: AppColors.deepBrown)
-                      : Icon(Icons.search_rounded, color: AppColors.deepBrown)),
+                      : Icon(Icons.search_outlined,
+                          color: AppColors.deepBrown)),
               IconButton(
                   onPressed: () {
                     setState(() {

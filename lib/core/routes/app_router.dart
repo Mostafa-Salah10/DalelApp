@@ -4,6 +4,8 @@ import 'package:dalel/features/auth/prensentation/manager/cubit/auth_cubit_cubit
 import 'package:dalel/features/auth/prensentation/screens/auth_signin_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/auth_signup_veiw.dart';
 import 'package:dalel/features/auth/prensentation/screens/forget_pass_view.dart';
+import 'package:dalel/features/cart/presentation/manager/cubit/cart_cubit.dart';
+import 'package:dalel/features/cart/presentation/screens/shopping_cart_view.dart';
 import 'package:dalel/features/home/presentation/screens/custom_bottom_navbar.dart';
 import 'package:dalel/features/onboarding/presentation/manager/indicator_provider.dart';
 import 'package:dalel/features/onboarding/presentation/screens/onboarding_view.dart';
@@ -44,6 +46,12 @@ abstract class AppRouter {
       case AppRoutes.bottomNavBarScreenRoute:
         return MaterialPageRoute(
             builder: (context) => const CustomBottomNavbar());
+      case AppRoutes.shoppingCartScreenRoute:
+        return MaterialPageRoute(
+            builder: (context) => BlocProvider(
+                  create: (context) => CartCubit()..fetchUserCart(),
+                  child: const ShoppingCartView(),
+                ));
 
       default:
         return MaterialPageRoute(builder: (context) => const SplashView());

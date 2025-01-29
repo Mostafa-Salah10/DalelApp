@@ -6,10 +6,11 @@ import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 class CustomHistoricalLongListView extends StatelessWidget {
   final List<DataModel> dataList;
   final String? route;
+  final List<DataModel>?recommendations;
   const CustomHistoricalLongListView({
     super.key,
     required this.dataList,
-    this.route,
+    this.route, this.recommendations,
   });
 
   @override

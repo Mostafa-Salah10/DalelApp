@@ -101,5 +101,6 @@ class Assets {
   static const String assetsImagesBrid = "lib/assets/images/brid.png";
   static const String assetsImagesEllipse = "lib/assets/images/Ellipse.png";
   static const String assetsImagesPicture = "lib/assets/images/Picture.png";
+  static const String assetsImagesRemoveIcon = "lib/assets/images/icons8-delete-100.png";
 }
 

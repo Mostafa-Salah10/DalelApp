@@ -2,6 +2,8 @@ import 'package:dalel/core/model/data_model.dart';
 import 'package:dalel/core/utils/app_assets.dart';
 import 'package:dalel/core/widgets/custom_historical_listview.dart';
 import 'package:dalel/core/widgets/custom_historical_long_listview.dart';
+import 'package:dalel/features/cart/data/model/cart_item_model.dart';
+import 'package:dalel/features/cart/presentation/widgets/custom_mycart_listview_widget.dart';
 
 import 'package:skeletonizer/skeletonizer.dart';
 
@@ -62,3 +64,49 @@ class CustomShimmerHistoricalLongListview extends StatelessWidget {
   ];
 }
 
+class CustomShimmerCartListView extends StatelessWidget {
+  CustomShimmerCartListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Skeletonizer(child: CustomMyCartListViewWidget(list: _dummyList));
+  }
+
+  final List<CartItemModel> _dummyList = [
+    CartItemModel(
+        image: Assets.assetsImages800pxRichardCoeurDeLion,
+        title: 'Mostafa Salah',
+        quantity: 1,
+        price: 120,
+        id: '',
+        isSelected: false),
+    CartItemModel(
+        image: Assets.assetsImages800pxRichardCoeurDeLion,
+        title: 'Mostafa Salah',
+        quantity: 1,
+        price: 120,
+        id: '',
+        isSelected: false),
+    CartItemModel(
+        image: Assets.assetsImages800pxRichardCoeurDeLion,
+        title: 'Mostafa Salah',
+        quantity: 1,
+        price: 120,
+        id: '',
+        isSelected: false),
+    CartItemModel(
+        image: Assets.assetsImages800pxRichardCoeurDeLion,
+        title: 'Mostafa Salah',
+        quantity: 1,
+        price: 120,
+        id: '',
+        isSelected: false),
+    CartItemModel(
+        image: Assets.assetsImages800pxRichardCoeurDeLion,
+        title: 'Mostafa Salah',
+        quantity: 1,
+        price: 120,
+        id: '',
+        isSelected: false),
+  ];
+}

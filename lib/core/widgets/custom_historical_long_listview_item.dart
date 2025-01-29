@@ -1,6 +1,10 @@
 import 'package:dalel/core/model/data_model.dart';
+import 'package:dalel/features/cart/data/model/history_book_model.dart';
+import 'package:dalel/features/cart/presentation/manager/cubit/cart_cubit.dart';
+import 'package:dalel/features/cart/presentation/screens/bazar_details_view.dart';
 import 'package:dalel/features/home/data/model/historical_data_model.dart';
 import 'package:dalel/features/home/presentation/screens/historical_details_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/onboarding/presentation/exports_onboarding_feature.dart';
 
 class CustomHistoricalLonglistViewItem extends StatelessWidget {
@@ -28,6 +32,18 @@ class CustomHistoricalLonglistViewItem extends StatelessWidget {
                 recommendations: recommendations as List<HistoricalDataModel>,
               ),
             ));
+          }
+
+          if (route == AppRoutes.bazarDatailsScreenRoute) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => BlocProvider(
+                      create: (context) => CartCubit()..fetchUserCart(),
+                      child: BazarDetailsView(
+                        historicalBookModel: mylist as HistoryBookModel,
+                        recommendations:
+                            recommendations as List<HistoryBookModel>,
+                      ),
+                    )));
           }
         },
         child: Card(

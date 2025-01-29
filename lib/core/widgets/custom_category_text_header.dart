@@ -13,7 +13,7 @@ class CustomTextCategoryHeader extends StatelessWidget {
       child: Text(
         text,
         style: AppTextStyle.poppinsstyle14.copyWith(
-            fontSize: SizeConfig.textSize! * 3, fontWeight: FontWeight.bold),
+            fontSize: SizeConfig.textSize! * 2.5, fontWeight: FontWeight.bold),
       ),
     );
   }

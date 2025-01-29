@@ -1,4 +1,4 @@
-import 'package:dalel/features/home/data/model/historical_data_model.dart';
+import 'package:dalel/core/model/data_model.dart';
 import 'package:dalel/features/home/presentation/widgets/custom_readmore_text.dart';
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
 
@@ -9,7 +9,7 @@ class DatailsStack extends StatelessWidget {
     required this.logoImage,
   });
 
-  final HistoricalDataModel historicalDataModel;
+  final DataModel historicalDataModel;
   final String logoImage;
 
   @override

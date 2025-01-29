@@ -19,8 +19,9 @@ void main() async {
   checkAuthStateChanges();
 
   runApp(DevicePreview(
-      enabled: true,
-      builder: (context) {
-        return const DalelApp();
-      }));
+    enabled: true,
+    builder: (context) {
+      return const DalelApp();
+    }
+  ));
 }
