@@ -189,4 +189,18 @@ class CartCubit extends Cubit<CartState> {
     }
     emit(CartGetTotalPriceValueState());
   }
+
+
+  CartItemModel? checkSelectedItems() {
+    for (CartItemModel item in userCartList) {
+      if (item.isSelected) {
+        return item;
+      }
+    }
+    return null;
+  }
+
+
+
+
 }
