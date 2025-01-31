@@ -18,10 +18,5 @@ void main() async {
   await CashHelper.init();
   checkAuthStateChanges();
 
-  runApp(DevicePreview(
-    enabled: true,
-    builder: (context) {
-      return const DalelApp();
-    }
-  ));
+  runApp(const DalelApp());
 }

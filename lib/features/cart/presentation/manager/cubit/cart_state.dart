@@ -53,3 +53,5 @@ final class CartIncrementState extends CartState {}
 final class CartDecrementtState extends CartState {}
 final class CartToggelCheckBoxValueState extends CartState {}
 final class CartGetTotalPriceValueState extends CartState {}
+final class CartChangeGroupValueState extends CartState {}
+

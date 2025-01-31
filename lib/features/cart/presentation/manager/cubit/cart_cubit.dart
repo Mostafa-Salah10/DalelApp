@@ -16,6 +16,7 @@ class CartCubit extends Cubit<CartState> {
   List<HistoryBookModel> histricalSouvinersFilterationList = [];
   List<CartItemModel> userCartList = [];
   num totalPayment = 0.0;
+  String groupValue = 'My Credit Card';
 
   Future<void> fetchHistoricalPeriods() async {
     try {
@@ -190,8 +191,7 @@ class CartCubit extends Cubit<CartState> {
     emit(CartGetTotalPriceValueState());
   }
 
-
-  CartItemModel? checkSelectedItems() {
+CartItemModel? checkSelectedItems() {
     for (CartItemModel item in userCartList) {
       if (item.isSelected) {
         return item;
@@ -200,7 +200,9 @@ class CartCubit extends Cubit<CartState> {
     return null;
   }
 
-
-
+  void changeGroupValueOfRadioButton(String value) {
+    groupValue = value;
+    emit(CartChangeGroupValueState());
+  }
 
 }

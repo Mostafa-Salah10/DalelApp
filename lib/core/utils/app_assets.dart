@@ -102,5 +102,8 @@ class Assets {
   static const String assetsImagesEllipse = "lib/assets/images/Ellipse.png";
   static const String assetsImagesPicture = "lib/assets/images/Picture.png";
   static const String assetsImagesRemoveIcon = "lib/assets/images/icons8-delete-100.png";
+  static const String assetsImagesVerticalMenuIcon = "lib/assets/images/icons8-menu-vertical-90.png";
+  static const String assetsImagesBrownCreditCard = "lib/assets/images/brownCreditCard.png";
+  static const String assetsImagesOrderSuccess = "lib/assets/images/orderSuccess.png";
 }
 

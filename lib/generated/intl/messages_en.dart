@@ -26,10 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "agreeTerms":
             MessageLookupByLibrary.simpleMessage("I have agree to our"),
         "appName": MessageLookupByLibrary.simpleMessage("Dalel"),
+        "backtohome": MessageLookupByLibrary.simpleMessage("Back To Home"),
         "bazar": MessageLookupByLibrary.simpleMessage("Bazar"),
         "cart": MessageLookupByLibrary.simpleMessage("My Cart"),
+        "check": MessageLookupByLibrary.simpleMessage("Checkout Screen"),
         "createAcounte":
             MessageLookupByLibrary.simpleMessage("Create an Account"),
+        "delivary": MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "descraptionOnboarding1": MessageLookupByLibrary.simpleMessage(
             "Using our app’s history libraries you can find many historical periods "),
         "descraptionOnboarding2": MessageLookupByLibrary.simpleMessage(
@@ -62,7 +65,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "notifacation": MessageLookupByLibrary.simpleMessage("Notification"),
         "pass": MessageLookupByLibrary.simpleMessage("Password"),
+        "paymentMethode":
+            MessageLookupByLibrary.simpleMessage("Payment Method"),
         "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "product": MessageLookupByLibrary.simpleMessage("Selected Product"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "sentRest":

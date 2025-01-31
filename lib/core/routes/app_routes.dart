@@ -10,4 +10,6 @@ abstract class AppRoutes {
   static const String bottomNavBarScreenRoute = '/bottomNavBar';
   static const String shoppingCartScreenRoute = '/shoppingCart';
   static const String bazarDatailsScreenRoute = '/bazarDatails';
+  static const String checkoutScreenRoute = '/checkout';
+  static const String orderSuccessScreenRoute = '/orderSuccess';
 }

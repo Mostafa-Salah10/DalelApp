@@ -3,8 +3,10 @@ import 'package:dalel/features/cart/presentation/manager/cubit/cart_cubit.dart';
 import 'package:dalel/features/cart/presentation/screens/cart_view.dart';
 import 'package:dalel/features/home/presentation/manager/cubit/home_cubit_cubit.dart';
 import 'package:dalel/features/home/presentation/screens/home_view.dart';
+import 'package:dalel/features/onboarding/presentation/exports_onboarding_feature.dart';
 import 'package:dalel/features/profile/presentation/manager/cubit/profile_cubit.dart';
 import 'package:dalel/features/profile/presentation/screens/profile_view.dart';
+import 'package:dalel/features/search/presentation/manager/provider/search_provider.dart';
 import 'package:dalel/features/search/presentation/screens/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,7 +34,9 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
         ..fetchHistoricalSouviners(),
       child: const CartView(),
     ),
-    const SearchView(),
+    ChangeNotifierProvider<SearchProvider>(
+        create: (context) => SearchProvider()..fetchAllData(),
+        child: const SearchView()),
     BlocProvider(
       create: (context) => ProfileCubit()..fetchUser(),
       child: const ProfileView(),

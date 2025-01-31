@@ -469,6 +469,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Delivery Address`
+  String get delivary {
+    return Intl.message(
+      'Delivery Address',
+      name: 'delivary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Selected Product`
+  String get product {
+    return Intl.message(
+      'Selected Product',
+      name: 'product',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Method`
+  String get paymentMethode {
+    return Intl.message(
+      'Payment Method',
+      name: 'paymentMethode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checkout Screen`
+  String get check {
+    return Intl.message(
+      'Checkout Screen',
+      name: 'check',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back To Home`
+  String get backtohome {
+    return Intl.message(
+      'Back To Home',
+      name: 'backtohome',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

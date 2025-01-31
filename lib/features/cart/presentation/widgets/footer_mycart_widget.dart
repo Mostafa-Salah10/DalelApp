@@ -4,8 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../onboarding/presentation/exports_onboarding_feature.dart';
 
 class FooterMyCartWidget extends StatelessWidget {
+  final void Function()? onPressed;
+  final String texbtn;
+  final num? totalPrice;
   const FooterMyCartWidget({
     super.key,
+    this.onPressed,
+    required this.texbtn,
+    this.totalPrice,
   });
 
   @override
@@ -30,8 +36,10 @@ class FooterMyCartWidget extends StatelessWidget {
               const Spacer(),
               BlocBuilder<CartCubit, CartState>(
                 builder: (context, state) {
-
-                  return Text('  \$ ${BlocProvider.of<CartCubit>(context).totalPayment}',
+                  return Text(
+                      totalPrice == null
+                          ? '\$ ${BlocProvider.of<CartCubit>(context).totalPayment}'
+                          : '\$ $totalPrice',
                       style: AppTextStyle.poppinsstyle16.copyWith(
                           fontWeight: FontWeight.bold,
                           fontSize: SizeConfig.textSize! * 1.8,
@@ -41,7 +49,7 @@ class FooterMyCartWidget extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          CustomButton(onPressed: () {}, text: 'Checkout Now')
+          CustomButton(onPressed: onPressed, text: texbtn)
         ],
       ),
     );
